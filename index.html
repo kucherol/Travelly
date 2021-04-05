@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image" href="images/suitcase.svg">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Travely</title>
+</head>
+<body>
+    <header>
+        <section class="header">
+            <div class="container">
+                <div class="header-nav">
+                    <a href="#" class="header__logo">Travely</a>
+                    <nav class="header__nav-menu">
+                        <div class="selects">
+                            <select name="currency" id="currency" class="header__nav-menu--currency">
+                                <option value="usd" class="header__nav-menu--currency-item" selected>USD</option>
+                                <option value="eur" class="header__nav-menu--currency-item">EUR</option>
+                            </select>
+                            <select name="language" id="language" class="header__nav-menu--language">
+                                <option value="eng" class="header__nav-menu--language-item" selected>ENGLISH</option>
+                                <option value="spa" class="header__nav-menu--language-item">SPANISH</option>
+                            </select>
+                        </div>
+                        <ul class="header__nav-menu--list lang-eng topnav">
+                            <li class="header__nav-menu--list-item"><a href="#main" class="header__nav-menu--list-link">Travel Bags</a></li>
+                            <li class="header__nav-menu--list-item"><a href="#main" class="header__nav-menu--list-link">Accesories</a></li>
+                            <li class="header__nav-menu--list-item"><a href="#contact" class="header__nav-menu--list-link">Guidebooks</a></li>
+                            <li class="header__nav-menu--list-item"><a href="#main" class="header__nav-menu--list-link">Maps</a></li>
+                            <li class="header__nav-menu--list-item"><a href="#footer" class="header__nav-menu--list-link">Support</a></li>
+                        </ul>
+                        <ul class="header__nav-menu--list lang-esp topnav" style="display: none">
+                            <li class="header__nav-menu--list-item"><a href="#main" class="header__nav-menu--list-link">Bolsas de viaje</a></li>
+                            <li class="header__nav-menu--list-item"><a href="#main" class="header__nav-menu--list-link">Accesorios</a></li>
+                            <li class="header__nav-menu--list-item"><a href="#contact" class="header__nav-menu--list-link">Guías de viaje</a></li>
+                            <li class="header__nav-menu--list-item"><a href="#main" class="header__nav-menu--list-link">Mapas</a></li>
+                            <li class="header__nav-menu--list-item"><a href="#footer" class="header__nav-menu--list-link">Apoyo</a></li>
+                        </ul>
+                        <div class="header__nav-menu--icons">
+                            <a href="#" class="header__nav-menu--icons-link"><i class="far fa-user"></i></a>
+                            <a href="#" class="header__nav-menu--icons-link"><i class="fas fa-search"></i></a>
+                            <button class="cart" id="myBtn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </nav>
+                </div>
+                <div class="header__title">
+                    <h3 class="header__title--small lang-eng">FIND EVERYTHING YOU NEED</h3>
+                    <h3 class="header__title--small lang-esp" style="display: none">ENCUENTRA TODO LO QUE NECESITAS</h3>
+                    <h1 class="header__title--big lang-eng">FOR A TRIP</h1>
+                    <h1 class="header__title--big lang-esp" style="display: none">PARA UN VIAJE</h1>
+                    <a style="text-decoration: none;" href="#main"><button  class="button header__title--button lang-eng" style="display: block; margin: auto;">VIEW ALL PRODUCTS</button></a>
+                    <a style="text-decoration: none;" href="#main"><button  class="button header__title--button lang-esp" style="display: none; margin: auto;">VER TODOS LOS PRODUCTOS</button></a>
+                </div>
+            </div>
+        </section>
+        <section class="bags">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="bags__first">
+                            <div class="bags__first--item"><img src="images/bags_first-big.png" alt="main bag" class="bags__first--img"></div>
+                            <div class="bags__first--item"><img src="images/bags_first-big.png" alt="main bag" class="bags__first--img"></div>
+                            <div class="bags__first--item"><img src="images/bags_first-big.png" alt="main bag" class="bags__first--img"></div>
+                            <div class="bags__first--item"><img src="images/bags_first-big.png" alt="main bag" class="bags__first--img"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="bags__info">
+                            <p class="bags__info--discount">-20%</p>
+                            <div class="bags__info--title-bg"><h3 class="bags__info--title-text">DAKINE SUITCASE</h3></div>
+                            <p class="bags__info--description">DESCRIPTION</p>
+                            <p class="bags__info--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas. <a href="" class="bags__info--text-link">Learn more...</a></p>
+                            <div class="bags__info--arrow">
+                                <img src="images/left.svg" alt="arrow" class="bags__info--arrow-left">
+                                <img src="images/right.svg" alt="arrow" class="bags__info--arrow-right">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 ">
+                        <div class="bags__right">
+                            <div class="bags__right-up">
+                                <div class="bags__right-up--slider">
+                                    <div class="bags__right-up--item"><img src="images/bags-two_bags.png" alt="main bag" class="bags__right-up--img"></div>
+                                    <div class="bags__right-up--item"><img src="images/bags-two_bags.png" alt="main bag" class="bags__right-up--img"></div>
+                                    <div class="bags__right-up--item"><img src="images/bags-two_bags.png" alt="main bag" class="bags__right-up--img"></div>
+                                    <div class="bags__right-up--item"><img src="images/bags-two_bags.png" alt="main bag" class="bags__right-up--img"></div>
+                                </div>
+                                <div class="bags__right-up--info">
+                                    <h3 class="bags__info--title-text">LUGGAGE PACK</h3>
+                                    <p class="bags__info--description bags__right-up--info-des">DESCRIPTION</p>
+                                    <p class="bags__info--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...<a href="" class="bags__info--text-link">Learn more...</a></p>
+                                </div>
+                            </div>
+                            <div class="bags__right-down">
+                                <div class="bags__right-down--info">
+                                    <h3 class="bags__info--title-text">Genius Pack High Altitude</h3>
+                                    <p class="bags__info--description bags__right-down--info-des">DESCRIPTION</p>
+                                    <p class="bags__info--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...<a href="" class="bags__info--text-link">Learn more...</a></p>
+                                </div>
+                                <div class="bags__right-down--slider ">
+                                    <div class="bags__right-down--item"><img src="images/bags_suit.png" alt="main bag" class="bags__right-down--img"></div>
+                                    <div class="bags__right-down--item"><img src="images/bags_suit.png" alt="main bag" class="bags__right-down--img"></div>
+                                    <div class="bags__right-down--item"><img src="images/bags_suit.png" alt="main bag" class="bags__right-down--img"></div>
+                                    <div class="bags__right-down--item"><img src="images/bags_suit.png" alt="main bag" class="bags__right-down--img"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section class="main">
+        <div class="container">
+            <div class="contact" id="contact">
+                <h2 class="contact--title">WIN A TRIP</h2>
+                <h3 class="contact--subtitle">WITH TRAVELY</h3>
+                <p class="contact--info">Enter your email to join.</p>
+                <form action="" class="contact__form">
+                    <input type="email" class="contact__form--email" required>
+                    <button class="contact__form--button">JOIN</button>
+                </form>
+            </div>
+            <div class="popular" id="main">
+                <div class="popular__info">
+                    <div class="popular__info--title">POPULAR</div>
+                    <div class="popular__info--filters">
+                        <select name="sort" id="sort" class="popular__sort">
+                            <option value="sort" class="header__nav-menu--currency-item" selected>Sort By</option>
+                            <option value="price" class="header__nav-menu--currency-item">Price</option>
+                            <option value="popularity" class="header__nav-menu--currency-item">Popularity</option>
+                        </select>
+                        <select name="filters" id="filters" class="popular__filter">
+                            <option value="filters" class="header__nav-menu--language item" selected>Filters</option>
+                            <option value="Best" class="header__nav-menu--language item">Best</option>
+                            <option value="worst" class="header__nav-menu--language item">Worst</option>
+                        </select>
+                    </div>
+                    <div class="popular__info--categories">
+                        <a href="#" class="popular__info-categories--new">NEW ARRIVALS</a>
+                        <a href="#" class="popular__info-categories--specials">SPECIALS</a>
+                        <a href="#" class="popular__info-categories--best">BEST SELLERS</a>
+                    </div>
+                </div>
+                <div class="popular__card">
+                    <div class="card card--small">
+                        <div class="card__img">
+                            <img src="images/bag1.png" alt="bag" class="card__img-item">
+                            <img src="images/bag1.png" alt="bag" class="card__img-item">
+                            <img src="images/bag1.png" alt="bag" class="card__img-item">
+                        </div>
+                        <p class="card--text" >Men's Retro Canvas..</p>
+                        <p class="card--price" >$39.99</p>
+                    </div>
+                    <div class="card card--big">
+                        <div class="card__img--big" >
+                            <img src="images/bag2.png" alt="bag" class="card__img-item">
+                            <img src="images/bag2.png" alt="bag" class="card__img-item">
+                            <img src="images/bag2.png" alt="bag" class="card__img-item">
+                        </div>
+                        <p class="card--text">Dakine Suitcase</p>
+                        <p class="card--price">$119.99</p>
+                    </div>
+                    <div class="card card--small">
+                        <div class="card__img">
+                            <img src="images/bag3.png" alt="bag" class="card__img-item">
+                            <img src="images/bag3.png" alt="bag" class="card__img-item">
+                            <img src="images/bag3.png" alt="bag" class="card__img-item">
+                        </div>
+                        <p class="card--text" >2 Piece Luggage Set</p>
+                        <p class="card--price">$79.99</p>
+                    </div>
+                    <div class="card card--small item_box">
+                        <div class="card__img">
+                            <img src="images/bag4.png" alt="bag" class="card__img-item">
+                            <img src="images/bag4.png" alt="bag" class="card__img-item">
+                            <img src="images/bag4.png" alt="bag" class="card__img-item">
+                        </div>
+                        <p class="card--text">Amsterdam Busine..</p>
+                        <p class="card--price">$19.99</p>
+                    </div>
+                    <div class="card card--small ">
+                        <div class="card__img">
+                            <img src="images/bag5.png" alt="bag" class="card__img-item">
+                            <img src="images/bag5.png" alt="bag" class="card__img-item">
+                            <img src="images/bag5.png" alt="bag" class="card__img-item">
+                        </div>
+                        <p class="card--text">Travel Tote Carrier Bag</p>
+                        <p class="card--price">$59.99</p>
+                    </div>
+                    <div class="card card--small ">
+                        <div class="card__img">
+                            <img src="images/bag3.png" alt="bag" class="card__img-item">
+                            <img src="images/bag3.png" alt="bag" class="card__img-item">
+                            <img src="images/bag3.png" alt="bag" class="card__img-item">
+                        </div>
+                        <p class="card--text">2 Piece Luggage Set</p>
+                        <p class="card--price">$79.99</p>
+                    </div>
+                    <div class="card card--small card--small-new">
+                        <div class="card__img">
+                            <img src="images/bag6.png" alt="bag" class="card__img-item">
+                            <img src="images/bag6.png" alt="bag" class="card__img-item">
+                            <img src="images/bag6.png" alt="bag" class="card__img-item">
+                        </div>
+                        <p class="card--text">Travel Tote Carrier Bag</p>
+                        <p class="card--price">$59.99</p>
+                    </div>
+                    <div class="card card--big card--bigger card--bigger2">
+                        <div class="card__img--big2 card__img--bigger">
+                            <img src="images/bag5.png" alt="bag" class="card__img-item">
+                            <img src="images/bag5.png" alt="bag" class="card__img-item">
+                            <img src="images/bag5.png" alt="bag" class="card__img-item">
+                        </div>
+                        <p class="card--text">Men's Retro Canvas..</p>
+                        <p class="card--price">$39.99</p>
+                    </div>
+                    <div class="card card--small card--small-height">
+                        <div class="card__img">
+                            <img src="images/bag5.png" alt="bag" class="card__img-item">
+                            <img src="images/bag5.png" alt="bag" class="card__img-item">
+                            <img src="images/bag5.png" alt="bag" class="card__img-item">
+                        </div>
+                        <p class="card--text">Dakine Suitcase</p>
+                        <p class="card--price">$119.99</p>
+                    </div>
+                    <div class="card card--small ">
+                        <div class="card__img">
+                            <img src="images/bag4.png" alt="bag" class="card__img-item">
+                            <img src="images/bag4.png" alt="bag" class="card__img-item">
+                            <img src="images/bag4.png" alt="bag" class="card__img-item">
+                        </div>
+                        <p class="card--text">Men's Retro Canvas..</p>
+                        <p class="card--price">$39.99</p>
+                    </div>
+                </div>
+            </div>
+            <button class="button popular--button">VIEW ALL PRODUCTS</button>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__row">
+                <div class="col-12 col-sm-6 col-md-3 footer__row--item">
+                    <h3 class="footer--header">INFORMATION</h3>
+                    <a href="#" class="footer--link">Specials</a>
+                    <a href="#" class="footer--link">New products</a>
+                    <a href="#" class="footer--link">Top sellers</a>
+                    <a href="#" class="footer--link">Our stores</a>
+                    <a href="#" class="footer--link">Contact us</a>
+                    <a href="#" class="footer--link">Terms and conditions of use</a>
+                    <a href="#" class="footer--link">About us</a>
+                    <a href="#" class="footer--link">Pages configurations</a>
+                    <a href="#" class="footer--link">Sitemap</a>
+                    <a href="#" class="footer--link">Blog</a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 footer__row--item">
+                    <h3 class="footer--header">FOLLOW US</h3>
+                    <a href="#" class="footer--link">Facebook</a>
+                    <a href="#" class="footer--link">Twitter</a>
+                    <a href="#" class="footer--link">RSS</a>
+                    <a href="#" class="footer--link">Google Plus</a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 footer__row--item">
+                    <h3 class="footer--header">MY ACCOUNT</h3>
+                    <a href="#" class="footer--link">My orders</a>
+                    <a href="#" class="footer--link">My merchandise returns</a>
+                    <a href="#" class="footer--link">My credit slips</a>
+                    <a href="#" class="footer--link">My addresses</a>
+                    <a href="#" class="footer--link">My personal info</a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 footer__row--item">
+                    <h3 class="footer--header">STORE INFORMATION</h3>
+                    <a href="#" class="footer--link">My company, 1234, New York</a>
+                    <a href="#" class="footer--link">Call us now: 0123-456-789</a>
+                    <a href="#" class="footer--link">Email: your@example.com</a>
+                </div>
+            </div>
+            <p class="footer--copyrights">All rights reserved</p>
+        </div>
+    </footer>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="cart__content">
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD54sVHmp1qbVogQS4ZVJTogXXnPMVIBuo&callback=initMap"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
