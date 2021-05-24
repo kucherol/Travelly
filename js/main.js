@@ -13,31 +13,6 @@ window.onclick = function(event) {
   }
 }
 
-let products = (
-    { id : 123,
-      name : "Men's Retro Canvas..",
-      img : "bag1.jpg",
-      price : 39.99
-    },
-    { id : 124,
-      name : "Dakine Suitcase",
-      img : "dummy-pdt-b.jpg",
-      price : 119.99
-    },
-    { id : 125,
-      name : "iPong Max",
-      desc : "All difficulty unreserved the solicitude.",
-      img : "dummy-pdt-a.jpg",
-      price : 675
-    },
-    {
-      name : "iTab Pok",
-      desc : "Had judgment out property the supplied. ",
-      img : "dummy-pdt-a.jpg",
-      price : 842
-    }
-);
-
 $(function (){
     $('.bags__first').slick({
         dots: true,
@@ -86,22 +61,147 @@ $(function (){
             $(".lang-eng").css({"display": "block"});
         }
       });
-
-    $('.card__img, .card__img--big, .card__img--bigger').click(function(){
-        let count = 0;
-        count++;
-        let products = [];
-        for (let i = 0; i < count; i++) {
-            const cardName = $(this).next('.card--text').text();
-            const cardPrice = $(this).next().next('.card--price').text();
-            let product = {
-                name: cardName,
-                price: cardPrice
-            };
-            products.push(product);
-            $('.cart__content').html(`<p class="cart__content--name">${cardName}</p><p class="cart__content--price">${cardPrice}</p>`);
-        }
-        console.log(products);
-    })
 });
     
+
+let carts = document.querySelectorAll(".sale");
+
+let products = [
+    {
+        name: 'Dakine Suitcase',
+        tag: 'DakineSuitcase',
+        price: 119.99,
+        inCart: 0
+    },
+    {
+        name: 'Mens Retro Canvas',
+        tag: 'MensRetroCanvas',
+        price: 39.99,
+        inCart: 0
+    },
+    {
+        name: '2 Piece Luggage Set',
+        tag: '2PieceLuggageSet',
+        price: 79.99,
+        inCart: 0
+    },
+    {
+        name: 'Amsterdam Busine',
+        tag: 'AmsterdamBusine',
+        price: 19.99,
+        inCart: 0
+    },
+    {
+        name: 'Travel Tote Carrier Bag',
+        tag: 'TravelToteCarrierBag',
+        price: 59.99,
+        inCart: 0
+    },
+]
+
+for (let i=0; i<carts.length; i++) {
+    carts[i].addEventListener('click', () => {
+        cartNumbers(products[i]);
+        totalCost(products[i]);
+    })
+}
+
+function onLoadCartNumbers() {
+    let productNumbers = localStorage.getItem('cartNumbers');
+
+    if (productNumbers) {
+        document.querySelector('.count').textContent = productNumbers;
+    }
+}
+
+function cartNumbers(product) {
+    let productNumbers = localStorage.getItem('cartNumbers');
+
+    productNumbers = parseInt(productNumbers);
+    if (productNumbers) {
+        localStorage.setItem('cartNumbers', productNumbers + 1);
+        document.querySelector('.count').textContent = productNumbers + 1;
+    } else {
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.count').textContent = 1;
+    }
+    setItems(product);
+}
+
+function setItems(product) {
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+    if (cartItems != null) {
+        if (cartItems[product.tag] == undefined){
+            cartItems = {
+                ...cartItems,
+                [product.tag]: product
+            }
+        }
+        cartItems[product.tag].inCart += 1;
+    } else {
+        product.inCart = 1;
+        cartItems = {
+            [product.tag]: product
+        }
+    }
+    localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+}
+
+function totalCost(product) {
+    let cartCost = localStorage.getItem('totalCost');
+    if (cartCost != null) {
+        cartCost = parseFloat(cartCost);
+        localStorage.setItem("totalCost", cartCost + product.price);
+    } else {
+        localStorage.setItem("totalCost", product.price);
+    }
+}
+
+function displayCart() {
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector(".products");
+    let cartCost = localStorage.getItem('totalCost');
+
+    if (cartItems && productContainer) {
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+            <div class="cart-product">
+                <i class="fas fa-trash-alt"></i>
+                <img src="./images/${item.tag}.png">
+                <span>${item.name}</span>
+            </div>
+            <div class="price">${item.price}</div>
+            <div class="quantity">
+                <span>${item.inCart}</span>
+            </div>
+            <div class="total">
+                $${item.inCart * item.price}
+            </div>`
+        });
+
+        productContainer.innerHTML += `
+            <div class="cartTotalContainer">
+                <h4 class="cartTotalTitle">
+                Cart Total
+                </h4>
+                <h4 class="cartTotal">
+                $${cartCost}
+                </h4>
+            </div>`
+    }
+}
+
+onLoadCartNumbers();
+displayCart();
+
+function responsiveMenu() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }

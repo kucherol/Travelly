@@ -29,12 +29,15 @@
                                 <option value="spa" class="header__nav-menu--language-item">SPANISH</option>
                             </select>
                         </div>
-                        <ul class="header__nav-menu--list lang-eng topnav">
+                        <ul class="header__nav-menu--list lang-eng topnav" id="myTopnav">
                             <li class="header__nav-menu--list-item"><a href="#main" class="header__nav-menu--list-link">Travel Bags</a></li>
                             <li class="header__nav-menu--list-item"><a href="#main" class="header__nav-menu--list-link">Accesories</a></li>
                             <li class="header__nav-menu--list-item"><a href="#contact" class="header__nav-menu--list-link">Guidebooks</a></li>
                             <li class="header__nav-menu--list-item"><a href="#main" class="header__nav-menu--list-link">Maps</a></li>
                             <li class="header__nav-menu--list-item"><a href="#footer" class="header__nav-menu--list-link">Support</a></li>
+                            <a href="javascript:void(0);" class="icon" onclick="responsiveMenu()">
+                                <i class="fa fa-bars"></i>
+                            </a>
                         </ul>
                         <ul class="header__nav-menu--list lang-esp topnav" style="display: none">
                             <li class="header__nav-menu--list-item"><a href="#main" class="header__nav-menu--list-link">Bolsas de viaje</a></li>
@@ -46,7 +49,7 @@
                         <div class="header__nav-menu--icons">
                             <a href="#" class="header__nav-menu--icons-link"><i class="far fa-user"></i></a>
                             <a href="#" class="header__nav-menu--icons-link"><i class="fas fa-search"></i></a>
-                            <button class="cart" id="myBtn"><i class="fas fa-shopping-cart"></i></button>
+                            <a href="#" class="header__nav-menu--icons-link" id="myBtn"><i class="fas fa-shopping-cart"></i><span class="count">0</span></a>
                         </div>
                     </nav>
                 </div>
@@ -55,7 +58,7 @@
                     <h3 class="header__title--small lang-esp" style="display: none">ENCUENTRA TODO LO QUE NECESITAS</h3>
                     <h1 class="header__title--big lang-eng">FOR A TRIP</h1>
                     <h1 class="header__title--big lang-esp" style="display: none">PARA UN VIAJE</h1>
-                    <a style="text-decoration: none;" href="#main"><button  class="button header__title--button lang-eng" style="display: block; margin: auto;">VIEW ALL PRODUCTS</button></a>
+                    <a style="text-decoration: none;" href="#main" class="button">VIEW ALL PRODUCTS</a>
                     <a style="text-decoration: none;" href="#main"><button  class="button header__title--button lang-esp" style="display: none; margin: auto;">VER TODOS LOS PRODUCTOS</button></a>
                 </div>
             </div>
@@ -63,15 +66,15 @@
         <section class="bags">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="bags__first">
-                            <div class="bags__first--item"><img src="images/bags_first-big.png" alt="main bag" class="bags__first--img"></div>
-                            <div class="bags__first--item"><img src="images/bags_first-big.png" alt="main bag" class="bags__first--img"></div>
-                            <div class="bags__first--item"><img src="images/bags_first-big.png" alt="main bag" class="bags__first--img"></div>
-                            <div class="bags__first--item"><img src="images/bags_first-big.png" alt="main bag" class="bags__first--img"></div>
+                            <div class="bags__first--item"><img src="images/DakineSuitcase.png" alt="main bag" class="bags__first--img"></div>
+                            <div class="bags__first--item"><img src="images/DakineSuitcase.png" alt="main bag" class="bags__first--img"></div>
+                            <div class="bags__first--item"><img src="images/DakineSuitcase.png" alt="main bag" class="bags__first--img"></div>
+                            <div class="bags__first--item"><img src="images/DakineSuitcase.png" alt="main bag" class="bags__first--img"></div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="bags__info">
                             <p class="bags__info--discount">-20%</p>
                             <div class="bags__info--title-bg"><h3 class="bags__info--title-text">DAKINE SUITCASE</h3></div>
@@ -83,14 +86,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 ">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
                         <div class="bags__right">
                             <div class="bags__right-up">
                                 <div class="bags__right-up--slider">
-                                    <div class="bags__right-up--item"><img src="images/bags-two_bags.png" alt="main bag" class="bags__right-up--img"></div>
-                                    <div class="bags__right-up--item"><img src="images/bags-two_bags.png" alt="main bag" class="bags__right-up--img"></div>
-                                    <div class="bags__right-up--item"><img src="images/bags-two_bags.png" alt="main bag" class="bags__right-up--img"></div>
-                                    <div class="bags__right-up--item"><img src="images/bags-two_bags.png" alt="main bag" class="bags__right-up--img"></div>
+                                    <div class="bags__right-up--item"><img src="images/2PieceLuggageSet.png" alt="main bag" class="bags__right-up--img"></div>
+                                    <div class="bags__right-up--item"><img src="images/2PieceLuggageSet.png" alt="main bag" class="bags__right-up--img"></div>
+                                    <div class="bags__right-up--item"><img src="images/2PieceLuggageSet.png" alt="main bag" class="bags__right-up--img"></div>
+                                    <div class="bags__right-up--item"><img src="images/2PieceLuggageSet.png" alt="main bag" class="bags__right-up--img"></div>
                                 </div>
                                 <div class="bags__right-up--info">
                                     <h3 class="bags__info--title-text">LUGGAGE PACK</h3>
@@ -104,7 +107,7 @@
                                     <p class="bags__info--description bags__right-down--info-des">DESCRIPTION</p>
                                     <p class="bags__info--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...<a href="" class="bags__info--text-link">Learn more...</a></p>
                                 </div>
-                                <div class="bags__right-down--slider ">
+                                <div class="bags__right-down--slider">
                                     <div class="bags__right-down--item"><img src="images/bags_suit.png" alt="main bag" class="bags__right-down--img"></div>
                                     <div class="bags__right-down--item"><img src="images/bags_suit.png" alt="main bag" class="bags__right-down--img"></div>
                                     <div class="bags__right-down--item"><img src="images/bags_suit.png" alt="main bag" class="bags__right-down--img"></div>
@@ -151,98 +154,98 @@
                 </div>
                 <div class="popular__card">
                     <div class="card card--small">
-                        <div class="card__img">
-                            <img src="images/bag1.png" alt="bag" class="card__img-item">
-                            <img src="images/bag1.png" alt="bag" class="card__img-item">
-                            <img src="images/bag1.png" alt="bag" class="card__img-item">
+                        <div class="card__img sale">
+                            <img src="images/MensRetroCanvas.png" alt="bag" class="card__img-item">
+                            <img src="images/MensRetroCanvas.png" alt="bag" class="card__img-item">
+                            <img src="images/MensRetroCanvas.png" alt="bag" class="card__img-item">
                         </div>
                         <p class="card--text" >Men's Retro Canvas..</p>
                         <p class="card--price" >$39.99</p>
                     </div>
                     <div class="card card--big">
-                        <div class="card__img--big" >
-                            <img src="images/bag2.png" alt="bag" class="card__img-item">
-                            <img src="images/bag2.png" alt="bag" class="card__img-item">
-                            <img src="images/bag2.png" alt="bag" class="card__img-item">
+                        <div class="card__img--big sale">
+                            <img src="images/DakineSuitcase.png" alt="bag" class="card__img-item">
+                            <img src="images/DakineSuitcase.png" alt="bag" class="card__img-item">
+                            <img src="images/DakineSuitcase.png" alt="bag" class="card__img-item">
                         </div>
                         <p class="card--text">Dakine Suitcase</p>
                         <p class="card--price">$119.99</p>
                     </div>
                     <div class="card card--small">
-                        <div class="card__img">
-                            <img src="images/bag3.png" alt="bag" class="card__img-item">
-                            <img src="images/bag3.png" alt="bag" class="card__img-item">
-                            <img src="images/bag3.png" alt="bag" class="card__img-item">
+                        <div class="card__img sale">
+                            <img src="images/2PieceLuggageSet.png" alt="bag" class="card__img-item">
+                            <img src="images/2PieceLuggageSet.png" alt="bag" class="card__img-item">
+                            <img src="images/2PieceLuggageSet.png" alt="bag" class="card__img-item">
                         </div>
                         <p class="card--text" >2 Piece Luggage Set</p>
                         <p class="card--price">$79.99</p>
                     </div>
                     <div class="card card--small item_box">
-                        <div class="card__img">
-                            <img src="images/bag4.png" alt="bag" class="card__img-item">
-                            <img src="images/bag4.png" alt="bag" class="card__img-item">
-                            <img src="images/bag4.png" alt="bag" class="card__img-item">
+                        <div class="card__img sale">
+                            <img src="images/AmsterdamBusine.png" alt="bag" class="card__img-item">
+                            <img src="images/AmsterdamBusine.png" alt="bag" class="card__img-item">
+                            <img src="images/AmsterdamBusine.png" alt="bag" class="card__img-item">
                         </div>
                         <p class="card--text">Amsterdam Busine..</p>
                         <p class="card--price">$19.99</p>
                     </div>
                     <div class="card card--small ">
-                        <div class="card__img">
-                            <img src="images/bag5.png" alt="bag" class="card__img-item">
-                            <img src="images/bag5.png" alt="bag" class="card__img-item">
-                            <img src="images/bag5.png" alt="bag" class="card__img-item">
+                        <div class="card__img sale">
+                            <img src="images/TravelToteCarrierBag.png" alt="bag" class="card__img-item">
+                            <img src="images/TravelToteCarrierBag.png" alt="bag" class="card__img-item">
+                            <img src="images/TravelToteCarrierBag.png" alt="bag" class="card__img-item">
                         </div>
                         <p class="card--text">Travel Tote Carrier Bag</p>
                         <p class="card--price">$59.99</p>
                     </div>
-                    <div class="card card--small ">
-                        <div class="card__img">
-                            <img src="images/bag3.png" alt="bag" class="card__img-item">
-                            <img src="images/bag3.png" alt="bag" class="card__img-item">
-                            <img src="images/bag3.png" alt="bag" class="card__img-item">
+                    <div class="card card--small">
+                        <div class="card__img sale">
+                            <img src="images/2PieceLuggageSet.png" alt="bag" class="card__img-item">
+                            <img src="images/2PieceLuggageSet.png" alt="bag" class="card__img-item">
+                            <img src="images/2PieceLuggageSet.png" alt="bag" class="card__img-item">
                         </div>
                         <p class="card--text">2 Piece Luggage Set</p>
                         <p class="card--price">$79.99</p>
                     </div>
                     <div class="card card--small card--small-new">
-                        <div class="card__img">
-                            <img src="images/bag6.png" alt="bag" class="card__img-item">
-                            <img src="images/bag6.png" alt="bag" class="card__img-item">
-                            <img src="images/bag6.png" alt="bag" class="card__img-item">
+                        <div class="card__img sale">
+                            <img src="images/MensRetroCanvas.png" alt="bag" class="card__img-item">
+                            <img src="images/MensRetroCanvas.png" alt="bag" class="card__img-item">
+                            <img src="images/MensRetroCanvas.png" alt="bag" class="card__img-item">
                         </div>
                         <p class="card--text">Travel Tote Carrier Bag</p>
                         <p class="card--price">$59.99</p>
                     </div>
                     <div class="card card--big card--bigger card--bigger2">
-                        <div class="card__img--big2 card__img--bigger">
-                            <img src="images/bag5.png" alt="bag" class="card__img-item">
-                            <img src="images/bag5.png" alt="bag" class="card__img-item">
-                            <img src="images/bag5.png" alt="bag" class="card__img-item">
+                        <div class="card__img--big2 card__img--bigger sale">
+                            <img src="images/MensRetroCanvas.png" alt="bag" class="card__img-item">
+                            <img src="images/MensRetroCanvas.png" alt="bag" class="card__img-item">
+                            <img src="images/MensRetroCanvas.png" alt="bag" class="card__img-item">
                         </div>
                         <p class="card--text">Men's Retro Canvas..</p>
                         <p class="card--price">$39.99</p>
                     </div>
                     <div class="card card--small card--small-height">
-                        <div class="card__img">
-                            <img src="images/bag5.png" alt="bag" class="card__img-item">
-                            <img src="images/bag5.png" alt="bag" class="card__img-item">
-                            <img src="images/bag5.png" alt="bag" class="card__img-item">
+                        <div class="card__img sale">
+                            <img src="images/bag6.png" alt="bag" class="card__img-item" style="margin-top: 50px">
+                            <img src="images/bag6.png" alt="bag" class="card__img-item" style="margin-top: 50px">
+                            <img src="images/bag6.png" alt="bag" class="card__img-item" style="margin-top: 50px">
                         </div>
                         <p class="card--text">Dakine Suitcase</p>
                         <p class="card--price">$119.99</p>
                     </div>
                     <div class="card card--small ">
-                        <div class="card__img">
-                            <img src="images/bag4.png" alt="bag" class="card__img-item">
-                            <img src="images/bag4.png" alt="bag" class="card__img-item">
-                            <img src="images/bag4.png" alt="bag" class="card__img-item">
+                        <div class="card__img sale">
+                            <img src="images/MensRetroCanvas.png" alt="bag" class="card__img-item">
+                            <img src="images/MensRetroCanvas.png" alt="bag" class="card__img-item">
+                            <img src="images/MensRetroCanvas.png" alt="bag" class="card__img-item">
                         </div>
                         <p class="card--text">Men's Retro Canvas..</p>
                         <p class="card--price">$39.99</p>
                     </div>
                 </div>
             </div>
-            <button class="button popular--button">VIEW ALL PRODUCTS</button>
+            <a class="button popular--button">VIEW ALL PRODUCTS</a>
         </div>
     </section>
     <footer class="footer" id="footer">
@@ -289,13 +292,19 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <div class="cart__content">
+            <div class="cart-content">
+                <div class="cart-content__header">
+                    <h5 class="cart-content__header--title">PRODUCT</h5>
+                    <h5 class="cart-content__header--price">PRICE</h5>
+                    <h5 class="cart-content__header--quantity">QUANTITY</h5>
+                    <h5 class="cart-content__header--total">TOTAL</h5>
+                </div>
+                <div class="products"></div>
             </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD54sVHmp1qbVogQS4ZVJTogXXnPMVIBuo&callback=initMap"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

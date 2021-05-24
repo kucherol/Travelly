@@ -1,0 +1,13 @@
+@mixin  dots-style {
+    li {
+        display: inline-block;
+        button {
+        border-radius: 50%;
+        border:none;
+        width: 14px;
+        height: 14px;
+        margin: 15px;
+        font-size: 0px;
+        }
+    }
+}
